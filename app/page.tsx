@@ -1158,40 +1158,224 @@ function LogosSection() {
 }
 
 // ─── 7. TESTIMONIAL ───
+function TestimonialMobile() {
+  return (
+    <section className="lg:hidden bg-black text-white px-5 py-10">
+      <h2
+        className="font-display uppercase text-white text-center mx-auto"
+        style={{ fontSize: 28, lineHeight: '30px', maxWidth: 335 }}
+      >
+        Відгуки з навчань
+      </h2>
+
+      <article className="mt-6 rounded-[24px] bg-white/[0.04] border border-white/10 p-5">
+        <div className="relative mx-auto rounded-[20px] overflow-hidden bg-white/10" style={{ width: 240, aspectRatio: '318/401' }}>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="font-display text-[56px] text-white/30 uppercase">ПБ</span>
+          </div>
+        </div>
+
+        <p className="mt-5 font-sans uppercase text-acid" style={{ fontSize: 11, letterSpacing: '0.08em' }}>
+          Учасник курсу
+        </p>
+        <div className="mt-2 font-display uppercase" style={{ fontSize: 22, lineHeight: '24px' }}>
+          Петро Бойчук
+        </div>
+        <blockquote className="mt-3 font-sans italic text-white/90" style={{ fontSize: 14, lineHeight: '20px' }}>
+          «Це курс не про те, як продавати, а як зростати та розвиватися в професії менеджер з продажів, щоб бути кращим. Цей курс — це фундамент кожного менеджера з продажів, щоб було розуміння, хто я та куди маю зростати.»
+        </blockquote>
+      </article>
+    </section>
+  );
+}
+
 function TestimonialSection() {
   return (
-    <section id="testimonials" className="bg-black text-white">
+    <section id="testimonials" className="hidden lg:block bg-black text-white">
       <div className="mx-auto max-w-[1304px] px-6 md:px-10 py-24 md:py-32">
         <h2 className="font-display text-[48px] md:text-h2 uppercase text-center leading-none tracking-[-0.022em] mb-14">
           Відгуки з навчань
         </h2>
 
-        <article className="rounded-[40px] bg-white/[0.04] border border-white/10 p-8 md:p-12 grid md:grid-cols-[320px_1fr] gap-10 items-center">
-          <div className="relative w-[240px] md:w-[320px] aspect-[318/401] mx-auto md:mx-0 rounded-[28px] overflow-hidden bg-white/10">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-[64px] text-white/30 uppercase">ПБ</span>
+        {/* Outer lime frame */}
+        <div
+          className="mx-auto relative"
+          style={{
+            maxWidth: 1299,
+            borderRadius: 48,
+            background: '#EBFF00',
+            border: '1px solid rgba(235,255,0,0.19)',
+            padding: 46,
+          }}
+        >
+          {/* Inner dark article */}
+          <article
+            className="grid grid-cols-[409px_1fr] gap-14 items-start"
+            style={{ background: '#11121A', borderRadius: 38.4, padding: '32px 32px 32px 32px', minHeight: 252 }}
+          >
+            {/* Left card — featured video style */}
+            <div
+              className="relative"
+              style={{ background: 'rgba(235,255,0,0.19)', borderRadius: 32, padding: 25, minHeight: 188 }}
+            >
+              <div className="flex items-center gap-2">
+                <Image src="/icons/icon-youtube.svg" alt="" width={16} height={12} />
+                <span className="font-sans uppercase text-acid" style={{ fontSize: 11, letterSpacing: '0.06em' }}>
+                  Дивитись відгук
+                </span>
+              </div>
+              <div
+                className="font-display uppercase text-white mt-4"
+                style={{ fontSize: 46, lineHeight: '46px' }}
+              >
+                Володимир Семанюк
+              </div>
             </div>
-          </div>
 
-          <div>
-            <p className="font-sans text-tag uppercase text-acid mb-4">Учасник курсу</p>
-            <div className="font-display text-h4-testimonial uppercase mb-6">Петро Бойчук</div>
-            <blockquote className="font-sans text-[22px] md:text-[24px] italic leading-[1.45] text-white/90">
-              «Це курс не про те, як продавати, а як зростати та розвиватися в професії менеджер з
-              продажів, щоб бути кращим. Цей курс — це фундамент кожного менеджера з продажів, щоб
-              було розуміння, хто я та куди маю зростати.»
+            {/* Right quote */}
+            <blockquote
+              className="font-sans italic"
+              style={{ fontSize: 18, lineHeight: '24px', color: 'rgba(250,248,245,0.85)', whiteSpace: 'pre-line' }}
+            >
+              {'“Завдяки матеріалам уроків зрозумів, як влаштовані продажі, як правильно спілкуватися з людьми. Також зрозумів, які етапи слід використовувати, щоб розмова пройшла успішно.\n\nЗ рівня “Відпрацювання заперечень” - дізнався, які фрази використовувати, щоб якісно відпрацювати заперечення клієнта. Також зрозумів, що заперечення - це добре, адже можна ще більше донести цінність клієнту”.'}
             </blockquote>
+          </article>
+        </div>
+
+        {/* Controls */}
+        <div className="mx-auto mt-10 flex items-center justify-between" style={{ maxWidth: 1299 }}>
+          <div className="flex items-center gap-2">
+            <span className="h-[3px] rounded-full bg-acid" style={{ width: 32 }} />
+            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
+            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
+            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
+            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
           </div>
-        </article>
+          <div className="flex items-center gap-3">
+            <button
+              aria-label="Previous"
+              className="flex items-center justify-center rounded-full border border-acid/50 text-acid hover:bg-acid hover:text-black transition-colors"
+              style={{ width: 44, height: 44 }}
+            >
+              ‹
+            </button>
+            <button
+              aria-label="Next"
+              className="flex items-center justify-center rounded-full border border-acid/50 text-acid hover:bg-acid hover:text-black transition-colors"
+              style={{ width: 44, height: 44 }}
+            >
+              ›
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
 // ─── 8. SECOND CTA ───
+function SecondCtaMobile() {
+  const pills = [
+    'Система діагностики відділу продажів',
+    'ТОП-5 проблем і як їх виправити',
+    'Живі розбори реальних дзвінків',
+    'Інструменти контролю без ручного прослуховування',
+    'Зрозумієш як побудувати відділ, який продає без тебе.',
+    'Готова система навчання команди',
+  ];
+  return (
+    <section className="lg:hidden relative bg-black text-white overflow-hidden px-5 py-10">
+      <h2
+        className="font-display uppercase text-white text-center mx-auto"
+        style={{ fontSize: 30, lineHeight: '32px', maxWidth: 335 }}
+      >
+        Такий живий формат проводимо раз на кілька місяців
+      </h2>
+
+      <p
+        className="mt-5 font-sans text-center text-white/75 mx-auto"
+        style={{ maxWidth: 300, fontSize: 13, lineHeight: '17px' }}
+      >
+        Цієї весни підприємці оновлюють свої відділи продажів. Приєднуйся.
+      </p>
+
+      {/* Pills panel */}
+      <div className="relative mt-6 overflow-hidden" style={{ borderRadius: 28, background: '#000' }}>
+        <div
+          className="absolute pointer-events-none"
+          style={{ left: -80, top: -80, width: 520, height: 400, borderRadius: '50%', background: '#EBFF00', filter: 'blur(80px)', opacity: 0.22 }}
+        />
+        <div
+          className="absolute pointer-events-none"
+          style={{ left: -40, top: 300, width: 520, height: 400, borderRadius: '50%', background: '#EBFF00', filter: 'blur(80px)', opacity: 0.18 }}
+        />
+
+        <div className="relative flex flex-col gap-3 p-4">
+          {pills.map((t) => (
+            <div
+              key={t}
+              className="relative"
+              style={{ borderRadius: 20, background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(8px)', padding: '14px 14px 14px 42px', minHeight: 56 }}
+            >
+              <div className="absolute" style={{ left: 14, top: 14, width: 20, height: 20 }}>
+                <Image src="/icons/icon-check.svg" alt="" width={20} height={20} />
+              </div>
+              <span className="font-sans" style={{ fontSize: 14, lineHeight: '18px', color: '#FAF8F5' }}>
+                {t}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <a
+        href="#"
+        className="mt-6 flex items-center justify-center hover:brightness-95"
+        style={{
+          height: 62,
+          borderRadius: 100,
+          background: 'linear-gradient(180deg, #F4FF4A 0%, #EBFF00 50%, #C9DB00 100%)',
+          border: '1px solid #EBFF00',
+          boxShadow: '0 0 30px rgba(235,255,0,0.35)',
+        }}
+      >
+        <span className="font-display uppercase text-black" style={{ fontSize: 22, lineHeight: 1 }}>
+          зареєструватись
+        </span>
+      </a>
+
+      {/* Meta */}
+      <div
+        className="mt-4 font-sans text-center"
+        style={{ fontSize: 11, lineHeight: '13px', color: 'rgba(217,217,217,1)' }}
+      >
+        Участь безкоштовна · Zoom-формат · Кількість обмежена
+      </div>
+
+      {/* Gift + gray pill */}
+      <div className="mt-5 relative" style={{ height: 78 }}>
+        <div
+          className="absolute inset-0"
+          style={{ borderRadius: 100, background: 'rgba(107,107,107,0.35)', backdropFilter: 'blur(8px)' }}
+        />
+        <div className="absolute" style={{ left: -4, top: -8, width: 86, height: 86 }}>
+          <Image src="/images/gift-badge.png" alt="" fill sizes="86px" className="object-contain" />
+        </div>
+        <div
+          className="absolute font-sans text-white"
+          style={{ left: 86, right: 14, top: 12, fontSize: 12, lineHeight: '16px' }}
+        >
+          Реєструйся протягом <span className="font-semibold">15:00</span> подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SecondCtaSection() {
   return (
-    <section id="registration" className="relative bg-black text-white overflow-hidden">
+    <section id="registration" className="hidden lg:block relative bg-black text-white overflow-hidden">
       <Image
         src="/images/footer-bg-2.png"
         alt=""
@@ -1243,7 +1427,9 @@ export default function LandingPage() {
       <AndriyStats />
       <LogosMobile />
       <LogosSection />
+      <TestimonialMobile />
       <TestimonialSection />
+      <SecondCtaMobile />
       <SecondCtaSection />
       <Footer />
     </main>
