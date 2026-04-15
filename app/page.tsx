@@ -1105,7 +1105,7 @@ function LogosMobile() {
         className="font-display uppercase text-white text-center mx-auto"
         style={{ fontSize: 40, lineHeight: '42px', maxWidth: 335 }}
       >
-        Я витратив на ці знання <span className="text-acid">18 років та 100+ тисяч доларів</span>
+        Я витратив на ці знання <span className="text-acid">18 років та 100<span className="font-sans">+</span> тисяч доларів</span>
       </h2>
 
       <div className="relative mt-8 w-full" style={{ aspectRatio: '1304 / 660' }}>
@@ -1133,7 +1133,7 @@ function LogosSection() {
           style={{ fontSize: 100, lineHeight: '100px', maxWidth: 1100 }}
         >
           Я витратив на ці знання{' '}
-          <span className="text-acid">18 років та 100+ тисяч доларів</span>
+          <span className="text-acid">18 років та 100<span className="font-sans">+</span> тисяч доларів</span>
         </h2>
 
         <div className="relative mt-16 w-full" style={{ aspectRatio: '1304 / 660' }}>
