@@ -1488,9 +1488,29 @@ function SecondCtaSection() {
   );
 }
 
+function MobileStickyCta() {
+  return (
+    <a
+      href="#registration"
+      className="lg:hidden fixed left-4 right-4 z-40 flex items-center justify-center"
+      style={{
+        bottom: 'calc(env(safe-area-inset-bottom, 0px) + 16px)',
+        height: 62,
+        borderRadius: 100,
+        background: 'linear-gradient(180deg, #F4FF4A 0%, #EBFF00 50%, #C9DB00 100%)',
+        boxShadow: '0 4px 40px rgba(235,255,0,0.55), inset 0 0 0 1px #EBFF00',
+      }}
+    >
+      <span className="font-display uppercase text-black" style={{ fontSize: 22, lineHeight: 1 }}>
+        зареєструватись
+      </span>
+    </a>
+  );
+}
+
 export default function LandingPage() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-black text-white min-h-screen pb-[94px] lg:pb-0">
       <Header />
       <HeroMobile />
       <Hero />
@@ -1511,6 +1531,7 @@ export default function LandingPage() {
       <SecondCtaMobile />
       <SecondCtaSection />
       <Footer />
+      <MobileStickyCta />
     </main>
   );
 }
