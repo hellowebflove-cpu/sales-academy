@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -28,8 +29,13 @@ export function Footer() {
           </a>
         </div>
       </div>
-      <div className="mx-auto max-w-[1304px] px-6 md:px-10 pb-6 font-sans text-footer text-white/40">
-        © 2026 Академія продажів Андрія Крупкіна
+      <div className="mx-auto max-w-[1304px] px-6 md:px-10 pb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-sans text-footer text-white/40">
+        <span>© 2026 Академія продажів Андрія Крупкіна</span>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+          <Link href="/privacy" className="hover:text-white">Політика конфіденційності</Link>
+          <Link href="/terms" className="hover:text-white">Публічна оферта</Link>
+          <Link href="/cookies" className="hover:text-white">Cookies</Link>
+        </div>
       </div>
     </footer>
   );
