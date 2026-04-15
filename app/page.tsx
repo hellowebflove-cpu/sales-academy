@@ -1155,23 +1155,60 @@ function TestimonialMobile() {
         Відгуки з навчань
       </h2>
 
-      <article className="mt-6 rounded-[24px] bg-white/[0.04] border border-white/10 p-5">
-        <div className="relative mx-auto rounded-[20px] overflow-hidden bg-white/10" style={{ width: 240, aspectRatio: '318/401' }}>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-display text-[56px] text-white/30 uppercase">ПБ</span>
+      {/* Outer lime frame — same as desktop */}
+      <div
+        className="mt-6 relative"
+        style={{
+          borderRadius: 28,
+          background: '#EBFF00',
+          border: '1px solid rgba(235,255,0,0.19)',
+          padding: 14,
+        }}
+      >
+        <article
+          className="flex flex-col gap-5"
+          style={{ background: '#11121A', borderRadius: 22, padding: 18 }}
+        >
+          <div
+            className="relative"
+            style={{ background: 'rgba(235,255,0,0.19)', borderRadius: 20, padding: 18 }}
+          >
+            <div className="flex items-center gap-2">
+              <Image src="/icons/icon-youtube.svg" alt="" width={16} height={12} />
+              <span className="font-sans uppercase text-acid" style={{ fontSize: 10, letterSpacing: '0.06em' }}>
+                Дивитись відгук
+              </span>
+            </div>
+            <div
+              className="font-display uppercase text-white mt-3"
+              style={{ fontSize: 28, lineHeight: '28px' }}
+            >
+              Володимир Семанюк
+            </div>
           </div>
-        </div>
 
-        <p className="mt-5 font-sans uppercase text-acid" style={{ fontSize: 11, letterSpacing: '0.08em' }}>
-          Учасник курсу
-        </p>
-        <div className="mt-2 font-display uppercase" style={{ fontSize: 22, lineHeight: '24px' }}>
-          Петро Бойчук
+          <blockquote
+            className="font-sans italic"
+            style={{ fontSize: 14, lineHeight: '20px', color: 'rgba(250,248,245,0.85)', whiteSpace: 'pre-line' }}
+          >
+            {'“Завдяки матеріалам уроків зрозумів, як влаштовані продажі, як правильно спілкуватися з людьми. Також зрозумів, які етапи слід використовувати, щоб розмова пройшла успішно.\n\nЗ рівня “Відпрацювання заперечень” - дізнався, які фрази використовувати, щоб якісно відпрацювати заперечення клієнта. Також зрозумів, що заперечення - це добре, адже можна ще більше донести цінність клієнту”.'}
+          </blockquote>
+        </article>
+      </div>
+
+      <div className="mt-6 flex items-center justify-between">
+        <div className="flex items-center gap-1.5">
+          <span className="h-[3px] rounded-full bg-acid" style={{ width: 24 }} />
+          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
+          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
+          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
+          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
         </div>
-        <blockquote className="mt-3 font-sans italic text-white/90" style={{ fontSize: 14, lineHeight: '20px' }}>
-          «Це курс не про те, як продавати, а як зростати та розвиватися в професії менеджер з продажів, щоб бути кращим. Цей курс — це фундамент кожного менеджера з продажів, щоб було розуміння, хто я та куди маю зростати.»
-        </blockquote>
-      </article>
+        <div className="flex items-center gap-2">
+          <button aria-label="Previous" className="flex items-center justify-center rounded-full border border-acid/50 text-acid" style={{ width: 36, height: 36 }}>‹</button>
+          <button aria-label="Next" className="flex items-center justify-center rounded-full border border-acid/50 text-acid" style={{ width: 36, height: 36 }}>›</button>
+        </div>
+      </div>
     </section>
   );
 }
