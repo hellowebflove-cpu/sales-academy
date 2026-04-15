@@ -72,7 +72,13 @@ function CheckItem({ text }: { text: string }) {
 // ─── 1b. HERO MOBILE ───
 function HeroMobile() {
   return (
-    <section className="lg:hidden relative bg-black text-white overflow-hidden px-5 pt-8 pb-6">
+    <section
+      className="lg:hidden relative text-white overflow-hidden px-5 pt-8 pb-6"
+      style={{
+        background:
+          'radial-gradient(ellipse 80% 55% at 50% 55%, #0E3A2C 0%, #071E17 45%, #020806 80%, #000 100%)',
+      }}
+    >
       {/* lime glow behind portrait area */}
       <div
         className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
@@ -1148,6 +1154,25 @@ function LogosSection() {
 }
 
 // ─── 7. TESTIMONIAL ───
+const TESTIMONIALS = [
+  {
+    name: 'Альона',
+    text: 'Привіт всім! Безмежне і величезне дякую Крупкіну і Ко. Андрій, у вас потужна команда 👍🔥 Це неймовірний досвід, шикарна подача матеріалу, задоволення від виконання завдань, знайомство з новими неймовірними людьми-однодумцями, розширення кругозору!!!\n\nДорогі однокурсники, бажаю всім вам втілити свої ідеї та цілі! Андрій, дякую :)',
+  },
+  {
+    name: 'Dasha Kydina',
+    text: 'В нашій компанії план продажів складає керівник відділу HoReCa, і сьогодні я вперше почула, що це робота маркетолога, РОПа, фінансиста… Одним словом — КОМАНДИ.\n\nДля виконання плану продажів керівники мають надати менеджерам усі інструменти. І тут є проблема. Завтра на зборах ТОПів знаю, яку тему буду піднімати. Андрій, дякую за урок 🔥',
+  },
+  {
+    name: 'Надія Щербина',
+    text: 'Діалось продаж — паралельно купа інсайтів по власному контенту. Ну що сказати: я зробила це. Андрій був правий на мільйон відсотків стосовно того, що мені потрібен саме цей майстер.\n\nКлючове — я бачу, як саме потрібно і під яким соусом. Дуже вдячна, що прийшла на цю програму. Контент просто 👌',
+  },
+  {
+    name: 'Володимир Семанюк',
+    text: 'Всім привіт! Завершив перший модуль і ділюся своїми інсайтами:\n\n— хочеш заробляти — продавай, а не консультуй\n— вір у те, що продаєш\n— знай досконало свій продукт\n— чим більша ціна клієнта, тим довший цикл продажу\n— використовуй скрипт і відпрацюй його до автоматизму\n— при проблемі залишайся з клієнтом, а не тікай',
+  },
+];
+
 function TestimonialMobile() {
   return (
     <section className="lg:hidden bg-black text-white px-5 py-10">
@@ -1158,59 +1183,26 @@ function TestimonialMobile() {
         Відгуки з навчань
       </h2>
 
-      {/* Outer lime frame — same as desktop */}
-      <div
-        className="mt-6 relative"
-        style={{
-          borderRadius: 28,
-          background: '#EBFF00',
-          border: '1px solid rgba(235,255,0,0.19)',
-          padding: 14,
-        }}
-      >
-        <article
-          className="flex flex-col gap-5"
-          style={{ background: '#11121A', borderRadius: 22, padding: 18 }}
-        >
-          <div
-            className="relative"
-            style={{ background: 'rgba(235,255,0,0.19)', borderRadius: 20, padding: 18 }}
+      <div className="mt-6 flex flex-col gap-4">
+        {TESTIMONIALS.map((t) => (
+          <article
+            key={t.name}
+            style={{ background: '#11121A', borderRadius: 20, padding: 18, border: '1px solid rgba(235,255,0,0.25)' }}
           >
-            <div className="flex items-center gap-2">
-              <Image src="/icons/icon-youtube.svg" alt="" width={16} height={12} />
-              <span className="font-sans uppercase text-acid" style={{ fontSize: 10, letterSpacing: '0.06em' }}>
-                Дивитись відгук
-              </span>
-            </div>
             <div
-              className="font-display uppercase text-white mt-3"
-              style={{ fontSize: 28, lineHeight: '28px' }}
+              className="font-display uppercase text-acid"
+              style={{ fontSize: 22, lineHeight: '24px' }}
             >
-              Володимир Семанюк
+              {t.name}
             </div>
-          </div>
-
-          <blockquote
-            className="font-sans italic"
-            style={{ fontSize: 14, lineHeight: '20px', color: 'rgba(250,248,245,0.85)', whiteSpace: 'pre-line' }}
-          >
-            {'“Завдяки матеріалам уроків зрозумів, як влаштовані продажі, як правильно спілкуватися з людьми. Також зрозумів, які етапи слід використовувати, щоб розмова пройшла успішно.\n\nЗ рівня “Відпрацювання заперечень” - дізнався, які фрази використовувати, щоб якісно відпрацювати заперечення клієнта. Також зрозумів, що заперечення - це добре, адже можна ще більше донести цінність клієнту”.'}
-          </blockquote>
-        </article>
-      </div>
-
-      <div className="mt-6 flex items-center justify-between">
-        <div className="flex items-center gap-1.5">
-          <span className="h-[3px] rounded-full bg-acid" style={{ width: 24 }} />
-          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
-          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
-          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
-          <span className="h-[3px] rounded-full bg-white/20" style={{ width: 14 }} />
-        </div>
-        <div className="flex items-center gap-2">
-          <button aria-label="Previous" className="flex items-center justify-center rounded-full border border-acid/50 text-acid" style={{ width: 36, height: 36 }}>‹</button>
-          <button aria-label="Next" className="flex items-center justify-center rounded-full border border-acid/50 text-acid" style={{ width: 36, height: 36 }}>›</button>
-        </div>
+            <blockquote
+              className="font-sans mt-3"
+              style={{ fontSize: 14, lineHeight: '20px', color: 'rgba(250,248,245,0.85)', whiteSpace: 'pre-line' }}
+            >
+              {t.text}
+            </blockquote>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -1224,76 +1216,31 @@ function TestimonialSection() {
           Відгуки з навчань
         </h2>
 
-        {/* Outer lime frame */}
-        <div
-          className="mx-auto relative"
-          style={{
-            maxWidth: 1299,
-            borderRadius: 48,
-            background: '#EBFF00',
-            border: '1px solid rgba(235,255,0,0.19)',
-            padding: 46,
-          }}
-        >
-          {/* Inner dark article */}
-          <article
-            className="grid grid-cols-[409px_1fr] gap-14 items-start"
-            style={{ background: '#11121A', borderRadius: 38.4, padding: '32px 32px 32px 32px', minHeight: 252 }}
-          >
-            {/* Left card — featured video style */}
-            <div
-              className="relative"
-              style={{ background: 'rgba(235,255,0,0.19)', borderRadius: 32, padding: 25, minHeight: 188 }}
+        <div className="mx-auto grid grid-cols-2 gap-6" style={{ maxWidth: 1299 }}>
+          {TESTIMONIALS.map((t) => (
+            <article
+              key={t.name}
+              style={{
+                background: '#11121A',
+                borderRadius: 28,
+                padding: 32,
+                border: '1px solid rgba(235,255,0,0.25)',
+              }}
             >
-              <div className="flex items-center gap-2">
-                <Image src="/icons/icon-youtube.svg" alt="" width={16} height={12} />
-                <span className="font-sans uppercase text-acid" style={{ fontSize: 11, letterSpacing: '0.06em' }}>
-                  Дивитись відгук
-                </span>
-              </div>
               <div
-                className="font-display uppercase text-white mt-4"
-                style={{ fontSize: 46, lineHeight: '46px' }}
+                className="font-display uppercase text-acid"
+                style={{ fontSize: 34, lineHeight: '36px' }}
               >
-                Володимир Семанюк
+                {t.name}
               </div>
-            </div>
-
-            {/* Right quote */}
-            <blockquote
-              className="font-sans italic"
-              style={{ fontSize: 18, lineHeight: '24px', color: 'rgba(250,248,245,0.85)', whiteSpace: 'pre-line' }}
-            >
-              {'“Завдяки матеріалам уроків зрозумів, як влаштовані продажі, як правильно спілкуватися з людьми. Також зрозумів, які етапи слід використовувати, щоб розмова пройшла успішно.\n\nЗ рівня “Відпрацювання заперечень” - дізнався, які фрази використовувати, щоб якісно відпрацювати заперечення клієнта. Також зрозумів, що заперечення - це добре, адже можна ще більше донести цінність клієнту”.'}
-            </blockquote>
-          </article>
-        </div>
-
-        {/* Controls */}
-        <div className="mx-auto mt-10 flex items-center justify-between" style={{ maxWidth: 1299 }}>
-          <div className="flex items-center gap-2">
-            <span className="h-[3px] rounded-full bg-acid" style={{ width: 32 }} />
-            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
-            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
-            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
-            <span className="h-[3px] rounded-full bg-white/20" style={{ width: 20 }} />
-          </div>
-          <div className="flex items-center gap-3">
-            <button
-              aria-label="Previous"
-              className="flex items-center justify-center rounded-full border border-acid/50 text-acid hover:bg-acid hover:text-black transition-colors"
-              style={{ width: 44, height: 44 }}
-            >
-              ‹
-            </button>
-            <button
-              aria-label="Next"
-              className="flex items-center justify-center rounded-full border border-acid/50 text-acid hover:bg-acid hover:text-black transition-colors"
-              style={{ width: 44, height: 44 }}
-            >
-              ›
-            </button>
-          </div>
+              <blockquote
+                className="font-sans mt-5"
+                style={{ fontSize: 17, lineHeight: '24px', color: 'rgba(250,248,245,0.85)', whiteSpace: 'pre-line' }}
+              >
+                {t.text}
+              </blockquote>
+            </article>
+          ))}
         </div>
       </div>
     </section>
