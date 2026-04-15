@@ -895,11 +895,11 @@ function AndriyStatsMobile() {
       {/* 2 stat cards */}
       <div className="mt-6 grid grid-cols-2 gap-3">
         <div className="bg-acid text-black" style={{ borderRadius: 16, padding: '14px 14px' }}>
-          <div className="font-display" style={{ fontSize: 36, lineHeight: '36px', fontWeight: 700 }}>18+</div>
+          <div className="font-display" style={{ fontSize: 36, lineHeight: '36px', fontWeight: 700 }}>18<span className="font-sans">+</span></div>
           <div className="font-sans mt-1" style={{ fontSize: 12, lineHeight: '14px' }}>років у сфері продажів</div>
         </div>
         <div className="bg-acid text-black" style={{ borderRadius: 16, padding: '14px 14px' }}>
-          <div className="font-display" style={{ fontSize: 36, lineHeight: '36px', fontWeight: 700 }}>184+</div>
+          <div className="font-display" style={{ fontSize: 36, lineHeight: '36px', fontWeight: 700 }}>184<span className="font-sans">+</span></div>
           <div className="font-sans mt-1" style={{ fontSize: 12, lineHeight: '14px' }}>побудованих відділів продажів</div>
         </div>
       </div>
@@ -1040,7 +1040,7 @@ function AndriyStats() {
             style={{ left: 805 - SECTION_LEFT, top: 592, width: 374, height: 167, borderRadius: 16, padding: '24px 28px' }}
           >
             <div className="font-display" style={{ fontSize: 80, lineHeight: '0.95', fontWeight: 700, whiteSpace: 'nowrap' }}>
-              18+ років
+              18<span className="font-sans">+</span> років
             </div>
             <div className="font-sans" style={{ fontSize: 24, lineHeight: '28px', marginTop: 8 }}>
               років у сфері продажів
@@ -1053,7 +1053,7 @@ function AndriyStats() {
             style={{ left: 1202 - SECTION_LEFT, top: 592, width: 410, height: 167, borderRadius: 16, padding: '24px 28px' }}
           >
             <div className="font-display" style={{ fontSize: 80, lineHeight: '0.95', fontWeight: 700 }}>
-              184+
+              184<span className="font-sans">+</span>
             </div>
             <div className="font-sans" style={{ fontSize: 24, lineHeight: '28px', marginTop: 8 }}>
               побудованих відділів продажів
