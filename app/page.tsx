@@ -1020,18 +1020,15 @@ function AndriyStats() {
             <Image src="/icons/icon-youtube.svg" alt="YouTube" width={40} height={28} />
           </a>
 
-          {/* Bio pill */}
-          <div
-            className="absolute flex"
-            style={{ left: 390 - SECTION_LEFT, top: 711, width: 442, gap: 14 }}
-          >
+          {/* Bio pill — aligned with founder bullets column */}
+          <div className="absolute" style={{ left: 369 - SECTION_LEFT, top: 711, width: 442 }}>
             <span
-              className="inline-block rounded-full bg-acid flex-shrink-0"
-              style={{ width: 9, height: 9, marginTop: 10 }}
+              className="inline-block rounded-full bg-acid absolute"
+              style={{ width: 9, height: 9, left: -20, top: 12 }}
             />
-            <span className="font-sans" style={{ fontSize: 24, lineHeight: '30px', color: '#FAF8F5' }}>
+            <div className="font-sans" style={{ fontSize: 20, lineHeight: '26px', color: '#FAF8F5' }}>
               Пройшов шлях від менеджера з продажів<br />до серійного підприємця
-            </span>
+            </div>
           </div>
 
           {/* Stat card 1 */}
