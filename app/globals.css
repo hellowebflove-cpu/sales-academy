@@ -18,10 +18,11 @@ body {
   color: #fff;
 }
 
-/* Scale 1920px desktop layout down to fit viewports between lg (1024) and 1920 */
-@media (min-width: 1024px) and (max-width: 1919px) {
-  html {
-    overflow-x: hidden;
-    zoom: calc(100vw / 1920);
-  }
-}
+/* Scale 1920px desktop layout down to fit viewports between lg (1024) and 1920.
+   `zoom: calc(...)` is NOT supported — must use fixed numbers per breakpoint. */
+@media (min-width: 1024px) { html { overflow-x: hidden; } }
+@media (min-width: 1024px) and (max-width: 1199px) { html { zoom: 0.58; } }
+@media (min-width: 1200px) and (max-width: 1365px) { html { zoom: 0.68; } }
+@media (min-width: 1366px) and (max-width: 1535px) { html { zoom: 0.75; } }
+@media (min-width: 1536px) and (max-width: 1727px) { html { zoom: 0.85; } }
+@media (min-width: 1728px) and (max-width: 1919px) { html { zoom: 0.95; } }
