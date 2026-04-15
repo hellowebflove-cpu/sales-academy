@@ -1,0 +1,15 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: //telegram.org/
+      - img [ref=e6]
+    - link "Download for Mac" [ref=e11] [cursor=pointer]:
+      - /url: //telegram.org/dl?tme=36f0597f07a834b983_6470125656122983091
+  - generic [ref=e13]:
+    - link [ref=e15] [cursor=pointer]:
+      - /url: tg://resolve?domain=krupkinacademybot&start=69dcdbab1a2cd0da1b02608d
+      - img [ref=e16]
+    - generic [ref=e17]: Академія продажів
+    - generic [ref=e18]: "@krupkinacademybot"
+    - link "Start Bot" [ref=e20] [cursor=pointer]:
+      - /url: tg://resolve?domain=krupkinacademybot&start=69dcdbab1a2cd0da1b02608d
