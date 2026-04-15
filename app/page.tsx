@@ -1100,23 +1100,13 @@ function LogosMobile() {
     <section className="lg:hidden bg-black text-white px-5 py-10">
       <h2
         className="font-display uppercase text-white text-center mx-auto"
-        style={{ fontSize: 28, lineHeight: '30px', maxWidth: 335 }}
+        style={{ fontSize: 40, lineHeight: '42px', maxWidth: 335 }}
       >
         Я витратив на ці знання <span className="text-acid">18 років та 100+ тисяч доларів</span>
       </h2>
 
-      <div className="mt-8 grid grid-cols-3 gap-3">
-        {logos.map((src) => (
-          <div
-            key={src}
-            className="relative rounded-full bg-white/5 border border-white/10 overflow-hidden p-3"
-            style={{ aspectRatio: '1 / 1' }}
-          >
-            <div className="relative w-full h-full">
-              <Image src={`/images/${src}`} alt="" fill sizes="110px" className="object-contain" />
-            </div>
-          </div>
-        ))}
+      <div className="relative mt-8 w-full" style={{ aspectRatio: '1304 / 660' }}>
+        <Image src="/images/31.png" alt="" fill sizes="100vw" className="object-contain" />
       </div>
     </section>
   );
@@ -1135,29 +1125,16 @@ function LogosSection() {
   return (
     <section className="hidden lg:block bg-black text-white">
       <div className="mx-auto max-w-[1304px] px-6 md:px-10 py-24 md:py-32">
-        <h2 className="font-display text-[40px] md:text-[72px] uppercase text-center leading-[1.05] tracking-tight max-w-[1100px] mx-auto">
+        <h2
+          className="font-display uppercase text-white text-center mx-auto"
+          style={{ fontSize: 100, lineHeight: '100px', maxWidth: 1100 }}
+        >
           Я витратив на ці знання{' '}
           <span className="text-acid">18 років та 100+ тисяч доларів</span>
         </h2>
 
-        <div className="relative mt-16 h-[520px] md:h-[660px] max-w-[1100px] mx-auto">
-          {logos.map((l, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full bg-white/5 border border-white/10 overflow-hidden p-3"
-              style={{
-                width: l.size,
-                height: l.size,
-                left: l.x,
-                top: l.y,
-                transform: 'translate(-50%,-50%)',
-              }}
-            >
-              <div className="relative w-full h-full">
-                <Image src={`/images/${l.src}`} alt="" fill sizes="200px" className="object-contain" />
-              </div>
-            </div>
-          ))}
+        <div className="relative mt-16 w-full" style={{ aspectRatio: '1304 / 660' }}>
+          <Image src="/images/31.png" alt="" fill sizes="1304px" className="object-contain" />
         </div>
       </div>
     </section>
