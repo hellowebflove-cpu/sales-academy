@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileStickyCta } from '@/components/MobileStickyCta';
+import { Reveal } from '@/components/Reveal';
 
 // ─── Real copy extracted from Figma node 1:1723 ───
 const FOR_WHOM_LEFT = [
@@ -1496,22 +1497,22 @@ export default function LandingPage() {
       <Header />
       <HeroMobile />
       <Hero />
-      <ForWhomMobile />
-      <ForWhomSection />
-      <MethodologyMobile />
-      <Methodology />
-      <ProgramMobileSection />
-      <ProgramSection />
-      <ResultsMobile />
-      <ResultsSection />
-      <AndriyStatsMobile />
-      <AndriyStats />
-      <LogosMobile />
-      <LogosSection />
-      <TestimonialMobile />
-      <TestimonialSection />
-      <SecondCtaMobile />
-      <SecondCtaSection />
+      <Reveal><ForWhomMobile /></Reveal>
+      <Reveal><ForWhomSection /></Reveal>
+      <Reveal><MethodologyMobile /></Reveal>
+      <Reveal><Methodology /></Reveal>
+      <Reveal><ProgramMobileSection /></Reveal>
+      <Reveal><ProgramSection /></Reveal>
+      <Reveal><ResultsMobile /></Reveal>
+      <Reveal><ResultsSection /></Reveal>
+      <Reveal><AndriyStatsMobile /></Reveal>
+      <Reveal><AndriyStats /></Reveal>
+      <Reveal><LogosMobile /></Reveal>
+      <Reveal><LogosSection /></Reveal>
+      <Reveal><TestimonialMobile /></Reveal>
+      <Reveal><TestimonialSection /></Reveal>
+      <Reveal><SecondCtaMobile /></Reveal>
+      <Reveal><SecondCtaSection /></Reveal>
       <Footer />
       <MobileStickyCta />
     </main>
