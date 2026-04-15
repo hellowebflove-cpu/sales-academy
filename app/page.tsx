@@ -130,7 +130,8 @@ function HeroMobile() {
         {/* CTA pill */}
         <a
           href="#"
-          className="mt-6 flex items-center justify-center hover:brightness-95"
+          data-register-cta
+          className="mt-6 flex items-center justify-center hover:brightness-95 cursor-pointer"
           style={{
             height: 62,
             borderRadius: 100,
@@ -321,7 +322,8 @@ function Hero() {
         {/* Right pill (lime gradient) — 554×126 at x=1056 y=728 */}
         <a
           href="#"
-          className="absolute flex items-center justify-center hover:brightness-95"
+          data-register-cta
+          className="absolute flex items-center justify-center hover:brightness-95 cursor-pointer"
           style={{
             left: 1056,
             top: 623,
@@ -1356,7 +1358,8 @@ function SecondCtaMobile() {
       {/* CTA */}
       <a
         href="#"
-        className="mt-6 flex items-center justify-center hover:brightness-95"
+        data-register-cta
+        className="mt-6 flex items-center justify-center hover:brightness-95 cursor-pointer"
         style={{
           height: 62,
           borderRadius: 100,
@@ -1469,7 +1472,8 @@ function SecondCtaSection() {
         {/* Right lime CTA */}
         <a
           href="#"
-          className="absolute flex items-center justify-center hover:brightness-95"
+          data-register-cta
+          className="absolute flex items-center justify-center hover:brightness-95 cursor-pointer"
           style={{
             left: 1056,
             top: 740,

@@ -14,7 +14,8 @@ export function MobileStickyCta() {
 
   return (
     <a
-      href="#registration"
+      href="#"
+      data-register-cta
       aria-hidden={!visible}
       className="lg:hidden fixed left-4 right-4 z-40 flex items-center justify-center transition-opacity duration-200"
       style={{

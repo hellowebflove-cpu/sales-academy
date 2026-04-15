@@ -41,7 +41,8 @@ export function Header() {
         {/* Right CTA pill — lime border, transparent bg, white text */}
         <a
           href="#"
-          className="absolute flex items-center justify-center rounded-full border border-white bg-transparent text-white hover:bg-white hover:text-black transition-colors"
+          data-register-cta
+          className="absolute flex items-center justify-center rounded-full border border-white bg-transparent text-white hover:bg-white hover:text-black transition-colors cursor-pointer"
           style={{ left: 1287, top: 28, width: 313, height: 49 }}
         >
           <span
