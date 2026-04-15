@@ -881,10 +881,10 @@ function AndriyStatsMobile() {
 
       {/* Social icons */}
       <div className="mt-6 flex gap-3">
-        <a href="#" className="flex items-center justify-center bg-white rounded-[4px]" style={{ width: 56, height: 56 }}>
+        <a href="https://youtube.com/@andriykrupkin" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white rounded-[4px]" style={{ width: 56, height: 56 }}>
           <Image src="/icons/icon-youtube.svg" alt="YouTube" width={28} height={28} />
         </a>
-        <a href="#" className="flex items-center justify-center bg-white rounded-[4px]" style={{ width: 56, height: 56 }}>
+        <a href="https://www.instagram.com/krupkin.pro" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white rounded-[4px]" style={{ width: 56, height: 56 }}>
           <Image src="/icons/icon-instagram.svg" alt="Instagram" width={26} height={26} />
         </a>
       </div>
@@ -999,14 +999,18 @@ function AndriyStats() {
 
           {/* Social icons — yellow glyph on translucent-white tile */}
           <a
-            href="#"
+            href="https://www.instagram.com/krupkin.pro"
+            target="_blank"
+            rel="noopener noreferrer"
             className="absolute flex items-center justify-center"
             style={{ left: 1404 - SECTION_LEFT, top: 372, width: 72, height: 72, background: 'rgba(255,255,255,0.08)' }}
           >
             <Image src="/icons/icon-instagram.svg" alt="Instagram" width={36} height={36} />
           </a>
           <a
-            href="#"
+            href="https://youtube.com/@andriykrupkin"
+            target="_blank"
+            rel="noopener noreferrer"
             className="absolute flex items-center justify-center"
             style={{ left: 1489 - SECTION_LEFT, top: 372, width: 68, height: 68, background: 'rgba(255,255,255,0.08)' }}
           >
