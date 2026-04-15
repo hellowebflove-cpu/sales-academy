@@ -956,10 +956,10 @@ function AndriyStats() {
       <div className="relative mx-auto" style={{ width: 1920, height: 1087, maxWidth: '100%' }}>
         {/* Inner absolute layer aligned to Figma x=303 */}
         <div className="absolute" style={{ left: SECTION_LEFT, top: 0, width: 1309, height: 1087 }}>
-          {/* Background pattern (same as hero) */}
+          {/* Background pattern (same as hero) — shifted left so bright area sits behind portrait, not text */}
           <div
             className="absolute pointer-events-none"
-            style={{ left: 0, top: 0, width: 1309, height: 869, zIndex: 0 }}
+            style={{ left: -550, top: 0, width: 1309, height: 869, zIndex: 0 }}
           >
             <Image
               src="/images/hero-bg-pattern.png"
