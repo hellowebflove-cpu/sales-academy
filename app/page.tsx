@@ -3,6 +3,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileStickyCta } from '@/components/MobileStickyCta';
 import { Reveal } from '@/components/Reveal';
+import { Countdown } from '@/components/Countdown';
 
 // ─── Real copy extracted from Figma node 1:1723 ───
 const FOR_WHOM_LEFT = [
@@ -171,7 +172,7 @@ function HeroMobile() {
             className="absolute font-sans text-white"
             style={{ left: 86, right: 14, top: 12, fontSize: 12, lineHeight: '16px' }}
           >
-            Реєструйся протягом <span className="font-semibold">15:00</span> подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+            Реєструйся протягом <Countdown className="font-semibold" /> подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
           </div>
         </div>
       </div>
@@ -317,7 +318,7 @@ function Hero() {
           className="absolute font-sans text-white whitespace-pre-line"
           style={{ left: 455, top: 644, width: 550, fontSize: 20, lineHeight: '28px' }}
         >
-          Реєструйся протягом <span className="font-semibold">15:00</span>{'\n'}подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+          Реєструйся протягом <Countdown className="font-semibold" />{'\n'}подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
         </div>
 
         {/* Right pill (lime gradient) — 554×126 at x=1056 y=728 */}
@@ -1392,7 +1393,7 @@ function SecondCtaMobile() {
           className="absolute font-sans text-white"
           style={{ left: 86, right: 14, top: 12, fontSize: 12, lineHeight: '16px' }}
         >
-          Реєструйся протягом <span className="font-semibold">15:00</span> подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+          Реєструйся протягом <Countdown className="font-semibold" /> подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
         </div>
       </div>
     </section>
@@ -1464,7 +1465,7 @@ function SecondCtaSection() {
           className="absolute font-sans text-white whitespace-pre-line"
           style={{ left: 455, top: 761, width: 550, fontSize: 20, lineHeight: '28px' }}
         >
-          Реєструйся протягом <span className="font-semibold">15:00</span>{'\n'}подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+          Реєструйся протягом <Countdown className="font-semibold" />{'\n'}подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
         </div>
 
         {/* Right lime CTA */}
