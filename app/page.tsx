@@ -881,10 +881,10 @@ function AndriyStatsMobile() {
 
       {/* Social icons */}
       <div className="mt-6 flex gap-3">
-        <a href="https://youtube.com/@andriykrupkin" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white rounded-[4px]" style={{ width: 56, height: 56 }}>
+        <a href="https://youtube.com/@andriykrupkin" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-[4px]" style={{ width: 56, height: 56, background: 'rgba(255,255,255,0.08)' }}>
           <Image src="/icons/icon-youtube.svg" alt="YouTube" width={28} height={28} />
         </a>
-        <a href="https://www.instagram.com/krupkin.pro" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-white rounded-[4px]" style={{ width: 56, height: 56 }}>
+        <a href="https://www.instagram.com/krupkin.pro" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-[4px]" style={{ width: 56, height: 56, background: 'rgba(255,255,255,0.08)' }}>
           <Image src="/icons/icon-instagram.svg" alt="Instagram" width={26} height={26} />
         </a>
       </div>
