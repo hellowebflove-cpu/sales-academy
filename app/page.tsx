@@ -1018,7 +1018,7 @@ function AndriyStats() {
 
           {/* Stat card 1 */}
           <div
-            className="absolute bg-acid text-black"
+            className="absolute bg-acid text-black z-10"
             style={{ left: 805 - SECTION_LEFT, top: 592, width: 374, height: 167, borderRadius: 16, padding: '24px 28px' }}
           >
             <div className="font-display" style={{ fontSize: 80, lineHeight: '0.95', fontWeight: 700, whiteSpace: 'nowrap' }}>
@@ -1031,7 +1031,7 @@ function AndriyStats() {
 
           {/* Stat card 2 */}
           <div
-            className="absolute bg-acid text-black"
+            className="absolute bg-acid text-black z-10"
             style={{ left: 1202 - SECTION_LEFT, top: 592, width: 410, height: 167, borderRadius: 16, padding: '24px 28px' }}
           >
             <div className="font-display" style={{ fontSize: 80, lineHeight: '0.95', fontWeight: 700 }}>
