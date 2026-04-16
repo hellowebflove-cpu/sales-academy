@@ -83,7 +83,7 @@ function HeroMobile() {
         className="relative mx-auto overflow-hidden"
         style={{
           width: '100%',
-          aspectRatio: '375 / 745',
+          aspectRatio: '375 / 677',
         }}
       >
         <div
@@ -92,7 +92,7 @@ function HeroMobile() {
             top: 0,
             left: 0,
             width: 375,
-            height: 745,
+            height: 677,
             transformOrigin: 'top left',
             transform: 'scale(calc(100vw / 375))',
           }}
@@ -102,7 +102,7 @@ function HeroMobile() {
           className="absolute pointer-events-none"
           style={{
             left: -64,
-            top: 115,
+            top: 47,
             width: 450,
             height: 293,
             background:
@@ -111,66 +111,65 @@ function HeroMobile() {
           }}
         />
 
-        {/* Eyebrow */}
+        {/* Eyebrow — LEFT aligned per Figma */}
         <div
-          className="hero-anim hero-anim-d1 absolute font-sans text-acid text-center"
-          style={{ left: 24, top: 68, width: 280, fontSize: 15, lineHeight: '15px' }}
+          className="hero-anim hero-anim-d1 absolute font-sans text-acid"
+          style={{ left: 24, top: 0, width: 280, fontSize: 15, lineHeight: '15px' }}
         >
           Майстермайнд Андрія Крупкіна
         </div>
 
-        {/* H1 */}
+        {/* H1 — LEFT aligned, 38/38/30 per Figma */}
         <h1
-          className="hero-anim hero-anim-d2 absolute font-display uppercase text-white text-center"
-          style={{ left: 21, top: 97, width: 331, letterSpacing: 0 }}
+          className="hero-anim hero-anim-d2 absolute font-display uppercase text-white"
+          style={{ left: 21, top: 29, width: 331, letterSpacing: 0 }}
         >
-          <span style={{ fontSize: 30, lineHeight: '34px', display: 'block' }}>Як власнику бізнесу</span>
-          <span className="text-acid" style={{ fontSize: 30, lineHeight: '34px', display: 'block' }}>
+          <span style={{ fontSize: 38, lineHeight: '38px', display: 'block' }}>Як власнику бізнесу</span>
+          <span className="text-acid" style={{ fontSize: 38, lineHeight: '38px', display: 'block' }}>
             зробити х2 у 2026 році
           </span>
-          <span style={{ fontSize: 24, lineHeight: '28px', display: 'block' }}>
+          <span style={{ fontSize: 30, lineHeight: '30px', display: 'block' }}>
             з сильною командою продажів
           </span>
         </h1>
 
-        {/* Subtitle */}
+        {/* Subtitle — LEFT aligned, 16/17 per Figma */}
         <p
-          className="hero-anim hero-anim-d3 absolute font-sans text-center"
-          style={{ left: 20, top: 220, width: 332, fontSize: 14, lineHeight: '17px', color: 'rgb(217,217,217)' }}
+          className="hero-anim hero-anim-d3 absolute font-sans"
+          style={{ left: 20, top: 146, width: 332, fontSize: 16, lineHeight: '17px', color: 'rgb(217,217,217)' }}
         >
           За 2 вечора розберемо ТОП-5 проблем вашого відділу продажу та систему, яка працює без вашого контролю
         </p>
 
-        {/* Portrait (centered, fades to transparent at bottom so CTA edge is clean) */}
+        {/* Portrait — positioned RIGHT per Figma (x=139, w=272, extending past right edge) */}
         <div
           className="hero-anim hero-anim-d3 absolute"
           style={{
-            left: '50%',
-            top: 230,
-            width: 300,
-            height: 380,
-            transform: 'translateX(-50%)',
+            left: 139,
+            top: 195,
+            width: 272,
+            height: 323,
             zIndex: 0,
-            WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-            maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 75%, transparent 100%)',
           }}
         >
           <Image
             src="/images/andriy-portrait.png"
             alt="Андрій Крупкін"
             fill
-            sizes="300px"
+            sizes="272px"
             priority
             className="object-contain object-bottom"
           />
         </div>
 
-        {/* 3 bullet checks — overlaid on LEFT side of portrait */}
+        {/* 3 bullet checks — LEFT side of portrait per Figma */}
         {HERO_CHECKS.map((t, idx) => (
           <div
             key={t}
             className="hero-anim hero-anim-d4 absolute flex items-start gap-2"
-            style={{ left: 9, top: 315 + idx * 72, width: 185 }}
+            style={{ left: 9, top: 247 + idx * 72, width: 185, zIndex: 1 }}
           >
             <div className="relative shrink-0" style={{ width: 40, height: 33 }}>
               <Image src="/images/check-sparkle-green.png" alt="" fill sizes="40px" className="object-contain" />
@@ -188,7 +187,7 @@ function HeroMobile() {
           className="hero-anim hero-anim-d5 cta-animated absolute flex items-center justify-center cursor-pointer"
           style={{
             left: 20,
-            top: 541,
+            top: 473,
             width: 335,
             height: 62,
             zIndex: 2,
@@ -206,13 +205,13 @@ function HeroMobile() {
         {/* Meta */}
         <div
           className="hero-anim hero-anim-d6 absolute font-sans text-center"
-          style={{ left: 24, top: 623, width: 326, fontSize: 11, lineHeight: '13px', color: 'rgb(217,217,217)' }}
+          style={{ left: 24, top: 555, width: 326, fontSize: 11, lineHeight: '13px', color: 'rgb(217,217,217)' }}
         >
           Участь безкоштовна · Zoom-формат · Кількість обмежена
         </div>
 
         {/* Gift + gray pill */}
-        <div className="hero-anim hero-anim-d6 absolute" style={{ left: 9, top: 646, width: 343, height: 78 }}>
+        <div className="hero-anim hero-anim-d6 absolute" style={{ left: 9, top: 578, width: 343, height: 78 }}>
           <div
             className="absolute inset-0"
             style={{
@@ -1301,6 +1300,7 @@ function SecondCtaMobile() {
       <a
         href="#"
         data-register-cta
+        data-bottom-cta
         className="cta-animated mt-6 flex items-center justify-center cursor-pointer"
         style={{
           height: 62,

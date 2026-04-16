@@ -6,10 +6,35 @@ export function MobileStickyCta() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > window.innerHeight * 0.9);
+    let scrolled = false;
+    let bottomCtaInView = false;
+
+    const update = () => setVisible(scrolled && !bottomCtaInView);
+
+    const onScroll = () => {
+      scrolled = window.scrollY > window.innerHeight * 0.9;
+      update();
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+
+    const bottomCta = document.querySelector<HTMLElement>('[data-bottom-cta]');
+    let io: IntersectionObserver | undefined;
+    if (bottomCta) {
+      io = new IntersectionObserver(
+        (entries) => {
+          bottomCtaInView = entries[0]?.isIntersecting ?? false;
+          update();
+        },
+        { threshold: 0.1 },
+      );
+      io.observe(bottomCta);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      io?.disconnect();
+    };
   }, []);
 
   return (
