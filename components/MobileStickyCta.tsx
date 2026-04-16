@@ -42,7 +42,7 @@ export function MobileStickyCta() {
       href="#"
       data-register-cta
       aria-hidden={!visible}
-      className="cta-animated lg:hidden !fixed left-4 right-4 z-40 flex items-center justify-center transition-opacity duration-200"
+      className="cta-animated md:hidden !fixed left-4 right-4 z-40 flex items-center justify-center transition-opacity duration-200"
       style={{
         bottom: 'calc(env(safe-area-inset-bottom, 0px) + 16px)',
         height: 62,
