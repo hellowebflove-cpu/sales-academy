@@ -69,90 +69,129 @@ function CheckItem({ text }: { text: string }) {
   );
 }
 
-// ─── 1b. HERO MOBILE ───
+// ─── 1b. HERO MOBILE — absolute layout per Figma 70:694 (375px canvas) ───
 function HeroMobile() {
   return (
     <section
-      className="lg:hidden relative text-white overflow-hidden px-5 pt-8 pb-6"
+      className="lg:hidden relative text-white overflow-hidden"
       style={{
         background:
           'radial-gradient(ellipse 80% 55% at 50% 55%, #0E3A2C 0%, #071E17 45%, #020806 80%, #000 100%)',
       }}
     >
-      {/* lime glow behind portrait area */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+        className="relative mx-auto overflow-hidden"
         style={{
-          top: 180,
-          width: 420,
-          height: 380,
-          background: 'radial-gradient(ellipse 60% 60% at 50% 50%, rgba(235,255,0,0.35) 0%, rgba(235,255,0,0.1) 40%, transparent 75%)',
-          filter: 'blur(20px)',
+          width: '100%',
+          aspectRatio: '375 / 745',
         }}
-      />
+      >
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: 375,
+            height: 745,
+            transformOrigin: 'top left',
+            transform: 'scale(calc(100vw / 375))',
+          }}
+        >
+        {/* lime glow behind portrait */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            left: -64,
+            top: 115,
+            width: 450,
+            height: 293,
+            background:
+              'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(235,255,0,0.28) 0%, rgba(235,255,0,0.08) 45%, transparent 75%)',
+            filter: 'blur(18px)',
+          }}
+        />
 
-      <div className="relative">
         {/* Eyebrow */}
         <div
-          className="hero-anim hero-anim-d1 font-sans text-acid text-center"
-          style={{ fontSize: 15, lineHeight: '15px' }}
+          className="hero-anim hero-anim-d1 absolute font-sans text-acid text-center"
+          style={{ left: 24, top: 68, width: 280, fontSize: 15, lineHeight: '15px' }}
         >
           Майстермайнд Андрія Крупкіна
         </div>
 
         {/* H1 */}
         <h1
-          className="hero-anim hero-anim-d2 mt-3 font-display uppercase text-white text-center"
-          style={{ letterSpacing: 0 }}
+          className="hero-anim hero-anim-d2 absolute font-display uppercase text-white text-center"
+          style={{ left: 21, top: 97, width: 331, letterSpacing: 0 }}
         >
-          <span style={{ fontSize: 38, lineHeight: '38px', display: 'block' }}>Як власнику бізнесу</span>
-          <span className="text-acid" style={{ fontSize: 38, lineHeight: '38px', display: 'block' }}>
+          <span style={{ fontSize: 30, lineHeight: '34px', display: 'block' }}>Як власнику бізнесу</span>
+          <span className="text-acid" style={{ fontSize: 30, lineHeight: '34px', display: 'block' }}>
             зробити х2 у 2026 році
           </span>
-          <span style={{ fontSize: 30, lineHeight: '32px', display: 'block' }}>
+          <span style={{ fontSize: 24, lineHeight: '28px', display: 'block' }}>
             з сильною командою продажів
           </span>
         </h1>
 
         {/* Subtitle */}
         <p
-          className="hero-anim hero-anim-d3 mt-3 font-sans text-center mx-auto"
-          style={{ maxWidth: 335, fontSize: 16, lineHeight: '17px', color: 'rgb(217,217,217)' }}
+          className="hero-anim hero-anim-d3 absolute font-sans text-center"
+          style={{ left: 20, top: 220, width: 332, fontSize: 14, lineHeight: '17px', color: 'rgb(217,217,217)' }}
         >
           За 2 вечора розберемо ТОП-5 проблем вашого відділу продажу та систему, яка працює без вашого контролю
         </p>
 
-        {/* Portrait */}
-        <div className="hero-anim hero-anim-d3 relative mx-auto mt-4" style={{ width: 272, height: 323 }}>
+        {/* Portrait (centered, fades to transparent at bottom so CTA edge is clean) */}
+        <div
+          className="hero-anim hero-anim-d3 absolute"
+          style={{
+            left: '50%',
+            top: 230,
+            width: 300,
+            height: 380,
+            transform: 'translateX(-50%)',
+            zIndex: 0,
+            WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+          }}
+        >
           <Image
             src="/images/andriy-portrait.png"
             alt="Андрій Крупкін"
             fill
-            sizes="272px"
+            sizes="300px"
             priority
             className="object-contain object-bottom"
           />
         </div>
 
-        {/* 3 bullet checks */}
-        <ul className="hero-anim hero-anim-d4 mt-6 space-y-4">
-          {HERO_CHECKS.map((t) => (
-            <li key={t} className="flex items-start gap-3">
-              <div className="relative shrink-0" style={{ width: 40, height: 32 }}>
-                <Image src="/images/check-sparkle-green.png" alt="" fill sizes="40px" className="object-contain" />
-              </div>
-              <span className="font-sans text-white" style={{ fontSize: 14, lineHeight: '20px' }}>{t}</span>
-            </li>
-          ))}
-        </ul>
+        {/* 3 bullet checks — overlaid on LEFT side of portrait */}
+        {HERO_CHECKS.map((t, idx) => (
+          <div
+            key={t}
+            className="hero-anim hero-anim-d4 absolute flex items-start gap-2"
+            style={{ left: 9, top: 315 + idx * 72, width: 185 }}
+          >
+            <div className="relative shrink-0" style={{ width: 40, height: 33 }}>
+              <Image src="/images/check-sparkle-green.png" alt="" fill sizes="40px" className="object-contain" />
+            </div>
+            <span className="font-sans text-white" style={{ fontSize: 13, lineHeight: '16px' }}>
+              {t}
+            </span>
+          </div>
+        ))}
 
-        {/* CTA pill */}
+        {/* CTA pill — z-index above portrait for clean edge */}
         <a
           href="#"
           data-register-cta
-          className="hero-anim hero-anim-d5 cta-animated mt-6 flex items-center justify-center cursor-pointer"
+          className="hero-anim hero-anim-d5 cta-animated absolute flex items-center justify-center cursor-pointer"
           style={{
+            left: 20,
+            top: 541,
+            width: 335,
             height: 62,
+            zIndex: 2,
             borderRadius: 100,
             background: 'linear-gradient(180deg, #F4FF4A 0%, #EBFF00 50%, #C9DB00 100%)',
             border: '1px solid #EBFF00',
@@ -166,14 +205,14 @@ function HeroMobile() {
 
         {/* Meta */}
         <div
-          className="hero-anim hero-anim-d6 mt-4 font-sans text-center"
-          style={{ fontSize: 11, lineHeight: '13px', color: 'rgba(217,217,217,1)' }}
+          className="hero-anim hero-anim-d6 absolute font-sans text-center"
+          style={{ left: 24, top: 623, width: 326, fontSize: 11, lineHeight: '13px', color: 'rgb(217,217,217)' }}
         >
           Участь безкоштовна · Zoom-формат · Кількість обмежена
         </div>
 
         {/* Gift + gray pill */}
-        <div className="hero-anim hero-anim-d6 mt-5 relative" style={{ height: 78 }}>
+        <div className="hero-anim hero-anim-d6 absolute" style={{ left: 9, top: 646, width: 343, height: 78 }}>
           <div
             className="absolute inset-0"
             style={{
@@ -191,6 +230,7 @@ function HeroMobile() {
           >
             Реєструйся протягом <Countdown className="font-semibold" /> подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
           </div>
+        </div>
         </div>
       </div>
     </section>
