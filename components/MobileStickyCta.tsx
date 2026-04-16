@@ -53,7 +53,10 @@ export function MobileStickyCta() {
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
-      <span className="font-display uppercase text-black" style={{ fontSize: 22, lineHeight: 1 }}>
+      <span
+        className="font-display uppercase text-black"
+        style={{ fontSize: 22, lineHeight: 1, display: 'inline-block', transform: 'translateY(0.08em)' }}
+      >
         зареєструватись
       </span>
     </a>

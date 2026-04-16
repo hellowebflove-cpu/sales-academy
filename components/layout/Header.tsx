@@ -47,7 +47,7 @@ export function Header() {
         >
           <span
             className="font-display uppercase whitespace-nowrap"
-            style={{ fontSize: 26, lineHeight: 1 }}
+            style={{ fontSize: 26, lineHeight: 1, display: 'inline-block', transform: 'translateY(0.08em)' }}
           >
             прийняти участь безкоштовно
           </span>

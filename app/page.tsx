@@ -197,7 +197,10 @@ function HeroMobile() {
             boxShadow: '0 0 30px rgba(235,255,0,0.35)',
           }}
         >
-          <span className="font-display uppercase text-black" style={{ fontSize: 22, lineHeight: 1 }}>
+          <span
+            className="font-display uppercase text-black"
+            style={{ fontSize: 22, lineHeight: 1, display: 'inline-block', transform: 'translateY(0.08em)' }}
+          >
             зареєструватись
           </span>
         </a>
@@ -385,7 +388,7 @@ function Hero() {
         >
           <span
             className="font-display uppercase text-black"
-            style={{ fontSize: 60, lineHeight: 1 }}
+            style={{ fontSize: 60, lineHeight: 1, display: 'inline-block', transform: 'translateY(0.08em)' }}
           >
             зареєструватись
           </span>
@@ -1310,7 +1313,10 @@ function SecondCtaMobile() {
           boxShadow: '0 0 30px rgba(235,255,0,0.35)',
         }}
       >
-        <span className="font-display uppercase text-black" style={{ fontSize: 22, lineHeight: 1 }}>
+        <span
+          className="font-display uppercase text-black"
+          style={{ fontSize: 22, lineHeight: 1, display: 'inline-block', transform: 'translateY(0.08em)' }}
+        >
           зареєструватись
         </span>
       </a>
@@ -1426,7 +1432,10 @@ function SecondCtaSection() {
             boxShadow: '0 4px 50px #EBFF00, inset 0 0 0 1px #EBFF00',
           }}
         >
-          <span className="font-display uppercase text-black" style={{ fontSize: 60, lineHeight: 1 }}>
+          <span
+            className="font-display uppercase text-black"
+            style={{ fontSize: 60, lineHeight: 1, display: 'inline-block', transform: 'translateY(0.08em)' }}
+          >
             зареєструватись
           </span>
         </a>
