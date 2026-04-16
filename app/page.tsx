@@ -627,17 +627,17 @@ function ProgramMobileSection() {
             className="bg-acid text-black"
             style={{ borderRadius: 20, padding: '20px' }}
           >
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <span
-                className="font-sans bg-white text-black rounded-full"
-                style={{ padding: '4px 12px', fontSize: 11, lineHeight: '14px' }}
+                className="font-sans bg-white text-black rounded-full inline-flex items-center"
+                style={{ height: 22, padding: '0 12px', fontSize: 11, lineHeight: 1 }}
               >
                 {card.day}
               </span>
               {card.date && (
                 <span
-                  className="font-sans bg-black text-white rounded-full"
-                  style={{ padding: '4px 12px', fontSize: 11, lineHeight: '14px' }}
+                  className="font-sans bg-black text-white rounded-full inline-flex items-center"
+                  style={{ height: 22, padding: '0 12px', fontSize: 11, lineHeight: 1 }}
                 >
                   {card.date}
                 </span>
@@ -658,9 +658,9 @@ function ProgramMobileSection() {
                 <li key={j} className="flex gap-2 items-start">
                   <span
                     className="inline-block rounded-full bg-black shrink-0"
-                    style={{ width: 6, height: 6, marginTop: 7 }}
+                    style={{ width: 6, height: 6, marginTop: 6 }}
                   />
-                  <span className="font-sans" style={{ fontSize: 14, lineHeight: '18px' }}>
+                  <span className="font-sans block" style={{ fontSize: 14, lineHeight: '18px' }}>
                     {b}
                   </span>
                 </li>
