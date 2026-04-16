@@ -4,16 +4,20 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[rgba(255,255,255,0.1)] backdrop-blur-md">
       {/* Mobile (<lg) */}
-      <div className="lg:hidden relative mx-auto h-[56px] px-4 flex items-center gap-2">
-        <a href="/" className="flex items-center shrink-0">
+      <div className="lg:hidden relative mx-auto h-[68px] px-5 flex items-center">
+        <a href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo.svg" alt="Академія продажів Андрія Крупкіна" style={{ height: 18, width: 'auto' }} />
+          <img src="/images/logo.svg" alt="Академія продажів Андрія Крупкіна" style={{ height: 21, width: 'auto' }} />
         </a>
         <div className="flex-1 flex items-center justify-end">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/30 text-white font-sans whitespace-nowrap" style={{ fontSize: 11, lineHeight: '12px' }}>
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-white font-sans" style={{ fontSize: 11, lineHeight: '12px' }}>
+            <span>2 дні</span>
+            <span className="w-[5px] h-[5px] rounded-full bg-acid inline-block" />
             <span>21–22 квітня</span>
-            <span className="w-[4px] h-[4px] rounded-full bg-acid inline-block" />
-            <span>19:00</span>
+            <span className="w-[5px] h-[5px] rounded-full bg-acid inline-block" />
+            <span>о 19:00</span>
+            <span className="w-[5px] h-[5px] rounded-full bg-acid inline-block" />
+            <Countdown className="text-acid font-semibold tabular-nums" />
           </div>
         </div>
       </div>
