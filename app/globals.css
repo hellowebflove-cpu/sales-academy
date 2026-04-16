@@ -94,20 +94,17 @@ html, body { overflow-x: hidden; }
   .cta-animated::before { display: none; }
 }
 
-/* Tablet (768–1023): use desktop 1920 layout scaled to viewport width */
+/* Tablet (768–1023): use desktop 1920 layout; zoom is applied via JS in layout.tsx */
 @media (min-width: 768px) and (max-width: 1023px) {
-  html { overflow-x: hidden; zoom: calc(100vw / 1920); }
+  html { overflow-x: hidden; }
   section.lg\:hidden { display: none !important; }
   .hidden.lg\:block { display: block !important; }
   .hidden.lg\:flex { display: flex !important; }
   .hidden.lg\:grid { display: grid !important; }
 }
 
-/* Desktop (1024–1919): scale 1920px layout to fit viewport fluidly */
+/* Desktop (1024+): overflow-x hidden; zoom also applied via JS for 1024–1919 */
 @media (min-width: 1024px) { html { overflow-x: hidden; } }
-@media (min-width: 1024px) and (max-width: 1919px) {
-  html { zoom: calc(100vw / 1920); }
-}
 
 /* ── Registration modal form controls ─────────────────────────── */
 .reg-input,
