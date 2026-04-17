@@ -565,7 +565,7 @@ function MethodologyMobile() {
     <section className="lg:hidden relative bg-black text-white px-5 py-10">
       <p
         className="font-sans"
-        style={{ fontSize: 14, lineHeight: '18px', color: '#EBFF00' }}
+        style={{ fontSize: 18, color: '#EBFF00' }}
       >
         Я покажу тобі протестовану методологію, яка допомагає будувати ефективні відділи з продажів та команди, яка драйвить продажі
       </p>
