@@ -1071,7 +1071,7 @@ function AndriyStats() {
               18<span className="font-sans" style={{ fontSize: '0.7em', fontWeight: 500, verticalAlign: '0.12em' }}>+</span> років
             </div>
             <div className="font-sans" style={{ fontSize: 18, lineHeight: '21px', marginTop: 6 }}>
-              років у сфері продажів
+              у сфері продажів
             </div>
           </div>
 
