@@ -96,9 +96,13 @@ body { overflow-x: hidden; }
   .cta-animated::before { display: none; }
 }
 
+/* Fluid zoom: scale 1440px layout to fit any screen 768–1439px */
+@media (min-width: 768px) and (max-width: 1439px) {
+  html { zoom: calc(100vw / 1440); overflow-x: clip; }
+}
+
 /* Tablet (768–1023): show desktop layout */
 @media (min-width: 768px) and (max-width: 1023px) {
-  html { overflow-x: clip; }
   section.lg\:hidden { display: none !important; }
   .hidden.lg\:block { display: block !important; }
   .hidden.lg\:flex { display: flex !important; }
