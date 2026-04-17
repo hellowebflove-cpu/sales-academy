@@ -444,7 +444,7 @@ function ForWhomMobile() {
         className="font-display uppercase text-white text-center"
         style={{ fontSize: 54, lineHeight: '54px', letterSpacing: '-0.022em' }}
       >
-        цей мастермайнд для тебе якщо:
+        цей майстер клас для тебе якщо:
       </h2>
 
       <div className="relative mt-8 overflow-hidden" style={{ borderRadius: 28, background: '#000' }}>
@@ -501,7 +501,7 @@ function ForWhomSection() {
             letterSpacing: 0,
           }}
         >
-          цей МАСТЕРМАЙНД ДЛЯ ТЕБЕ ЯКЩО:
+          цей МАЙСТЕР КЛАС ДЛЯ ТЕБЕ ЯКЩО:
         </h2>
 
         {/* Gradient panel */}
@@ -608,7 +608,7 @@ function ProgramMobileSection() {
         className="font-display uppercase text-white text-center"
         style={{ fontSize: 54, lineHeight: '54px', letterSpacing: '-0.022em' }}
       >
-        програма мастермайнду
+        програма майстер класу
       </h2>
 
       <div className="mt-8 space-y-4">
@@ -687,7 +687,7 @@ function ProgramSection() {
             lineHeight: '75px',
           }}
         >
-          програма мастермайнду
+          програма майстер класу
         </h2>
 
         {PROGRAM.map((p, i) => (
@@ -799,7 +799,7 @@ function ResultsMobile() {
         className="font-display uppercase text-white text-center"
         style={{ fontSize: 54, lineHeight: '54px', letterSpacing: '-0.022em' }}
       >
-        результати після мастермайнду
+        результати після майстер класу
       </h2>
 
       <div className="relative mt-8 overflow-hidden" style={{ borderRadius: 28, background: '#000' }}>
@@ -844,7 +844,7 @@ function ResultsSection() {
           className="absolute font-display uppercase text-white left-0 right-0 mx-auto text-center"
           style={{ top: 60, maxWidth: 990, fontSize: 75, lineHeight: '75px' }}
         >
-          результати після мастермайнду
+          результати після майстер класу
         </h2>
 
         <div
