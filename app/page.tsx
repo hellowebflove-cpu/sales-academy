@@ -359,7 +359,7 @@ function Hero() {
           className="hero-anim hero-anim-d5 absolute font-sans text-white whitespace-pre-line"
           style={{ left: 341, top: 483, width: 413, fontSize: 15, lineHeight: '21px' }}
         >
-          Реєструйся протягом <Countdown className="font-semibold" /> хв,{'\n'}та отримай в подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+          Реєструйся протягом <Countdown className="font-semibold" /> хв, та отримай в подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
         </div>
 
         {/* Right pill (lime gradient) */}
@@ -881,7 +881,7 @@ function ResultsSection() {
 // ─── 5b. ANDRIY STATS ───
 function AndriyStatsMobile() {
   const founders = [
-    'Бюро Продажів - міжнародна консалтингова компанія. Побудувано 185+ відділів продажів, більш ніж у 10-ти країнах світу.',
+    'Бюро продажів - міжнародна консалтингова компанія. Побудувано 185+ відділів продажів, більш ніж у 10-ти країнах світу.',
     'Академія продажів - рекрутинговий та освітній проєкт, який спеціалізується на наймі комерсантів. За 7 років нанято більше 1500 людей та 5000+ людей навчено продажам',
     'Ukrainian Sales Club - закрита спільнота комерсантів',
   ];
@@ -967,7 +967,7 @@ function AndriyStats() {
     {
       left: 50,
       width: 317,
-      text: 'Бюро Продажів - міжнародна консалтингова компанія. Побудувано 185+ відділів продажів, більш ніж у 10-ти країнах світу.',
+      text: 'Бюро продажів - міжнародна консалтингова компанія. Побудувано 185+ відділів продажів, більш ніж у 10-ти країнах світу.',
     },
     {
       left: 401,
@@ -1225,7 +1225,7 @@ function SecondCtaMobile() {
         className="mt-5 font-sans text-center text-white/75 mx-auto"
         style={{ maxWidth: 300, fontSize: 13, lineHeight: '17px' }}
       >
-        Цієї весни підприємці оновлюють свої відділи продажів. Приєднуйся.
+        Цієї весни підприємці оновлюють свої відділи продажів. Приєднуйся!
       </p>
 
       {/* Pills panel */}
@@ -1330,7 +1330,7 @@ function SecondCtaSection() {
           className="absolute font-sans text-center"
           style={{ left: 345, top: 195, width: 750, fontSize: 18, lineHeight: '23px', color: 'rgba(217,217,217,0.75)' }}
         >
-          Цієї весни підприємці оновлюють свої відділи продажів. Приєднуйся.
+          Цієї весни підприємці оновлюють свої відділи продажів. Приєднуйся!
         </p>
 
         <div
@@ -1368,7 +1368,7 @@ function SecondCtaSection() {
           className="absolute font-sans text-white whitespace-pre-line"
           style={{ left: 341, top: 571, width: 413, fontSize: 15, lineHeight: '21px' }}
         >
-          Реєструйся протягом <Countdown className="font-semibold" /> хв,{'\n'}та отримай в подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
+          Реєструйся протягом <Countdown className="font-semibold" /> хв, та отримай в подарунок гайд «5 типів менеджерів, які вбивають продажі компанії»
         </div>
 
         <a

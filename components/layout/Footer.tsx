@@ -5,11 +5,9 @@ export function Footer() {
   return (
     <footer className="bg-black border-t border-white/10">
       <div className="mx-auto max-w-[990px] px-6 md:px-10 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div className="font-sans text-logo uppercase font-bold leading-[1.28] text-white">
-          Академія продажів
-          <br />
-          Андрія Крупкіна
-        </div>
+        <a href="/" className="flex items-center">
+          <img src="/images/logo.svg" alt="Академія продажів Андрія Крупкіна" style={{ height: 23, width: 'auto' }} />
+        </a>
 
         <div className="flex items-center gap-3 text-white/70">
           <Image src="/icons/icon-phone.svg" alt="" width={20} height={20} className="text-acid" />
