@@ -299,7 +299,7 @@ function Hero() {
             whiteSpace: 'pre-line',
           }}
         >
-          Як зробити <span className="text-acid">х2 у продажах{'\n'}у 2026 році</span> з сильною{'\n'}командою продажів
+          Як власнику бізнесу{'\n'}<span className="text-acid">зробити х2 у 2026 році</span>{'\n'}з сильною командою продажів
         </h1>
 
         {/* Subtitle */}
