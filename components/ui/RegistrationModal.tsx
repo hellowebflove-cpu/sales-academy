@@ -109,7 +109,7 @@ export function RegistrationModal({ open, onClose }: { open: boolean; onClose: (
           className="font-display uppercase text-white"
           style={{ fontSize: 32, lineHeight: '34px' }}
         >
-          Реєстрація на <span className="text-acid">майстер клас</span>
+          Реєстрація на <span className="text-acid">майстер-клас</span>
         </h2>
         <p className="mt-3 font-sans text-white/70" style={{ fontSize: 14, lineHeight: '20px' }}>
           Залиш контакти — надішлемо деталі у Telegram.

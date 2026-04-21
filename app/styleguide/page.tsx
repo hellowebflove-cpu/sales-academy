@@ -113,8 +113,8 @@ export default function Home() {
             lh="100%"
             ls="-0.022em"
             weight="400"
-            usage="Заголовки секцій: 'Програма майстер класу'"
-            sample={<h2 className="font-display text-h2 uppercase">Програма майстер класу</h2>}
+            usage="Заголовки секцій: 'Програма майстер-класу'"
+            sample={<h2 className="font-display text-h2 uppercase">Програма майстер-класу</h2>}
           />
           <Row
             token="heading.h3"
@@ -273,7 +273,7 @@ export default function Home() {
             lh="150%"
             ls="-0.011em"
             weight="500"
-            usage="Пункти програми майстер класу"
+            usage="Пункти програми майстер-класу"
             sample={
               <p className="font-sans text-body max-w-xl">
                 Як порахувати в цифрах скільки грошей твій відділ зливає щотижня.
@@ -289,7 +289,7 @@ export default function Home() {
             ls="0"
             weight="400"
             usage="Підзаголовок hero, метадані"
-            sample={<p className="font-sans text-body-lead">Майстер клас Андрія Крупкіна</p>}
+            sample={<p className="font-sans text-body-lead">Майстер-клас Андрія Крупкіна</p>}
           />
           <Row
             token="body-list"
@@ -299,7 +299,7 @@ export default function Home() {
             lh="24px"
             ls="0"
             weight="400"
-            usage="Пункти чеклистів ('цей майстер клас для тебе якщо')"
+            usage="Пункти чеклистів ('цей майстер-клас для тебе якщо')"
             sample={
               <ul className="space-y-3 max-w-xl">
                 <li className="font-sans text-body-list flex gap-3"><span className="text-lime-400">●</span>У тебе є відділ продажів, але менеджери закривають слабше, ніж могли б.</li>

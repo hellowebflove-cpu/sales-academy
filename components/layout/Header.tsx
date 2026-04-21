@@ -31,7 +31,7 @@ export function Header() {
             <span className="w-[5px] h-[5px] rounded-full bg-acid inline-block" />
             <span>28–29 квітня</span>
             <span className="w-[5px] h-[5px] rounded-full bg-acid inline-block" />
-            <span>о 19:00</span>
+            <span>о 19:00 за Києвом</span>
           </div>
         </div>
       </div>
@@ -57,13 +57,13 @@ export function Header() {
           {/* Center date — white text with lime bullets */}
           <div
             className="absolute flex items-center justify-center gap-2 text-white font-sans"
-            style={{ left: 446, top: 31, width: 418, height: 18, fontSize: 18, lineHeight: '18px' }}
+            style={{ left: 395, top: 31, width: 520, height: 18, fontSize: 18, lineHeight: '18px' }}
           >
             <span>2 дні</span>
             <span className="w-[7px] h-[7px] rounded-full bg-acid inline-block" />
             <span>28–29 квітня</span>
             <span className="w-[7px] h-[7px] rounded-full bg-acid inline-block" />
-            <span>о 19:00</span>
+            <span>о 19:00 за Києвом</span>
           </div>
 
           {/* Right CTA pill — lime border, transparent bg, white text */}
